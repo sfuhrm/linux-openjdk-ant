@@ -10,8 +10,8 @@ echo "export JAVA_HOME=$(cd $(dirname $(readlink -f /etc/alternatives/java))/../
 ln -s $(cd $(dirname $(readlink -f /etc/alternatives/java))/../..; pwd) /jdk && \
 echo "export PATH=$JAVA_HOME/bin:$PATH" >> /etc/profile.d/java_home.sh && \
 source /etc/profile && \
-mkdir /app
-WORKDIR /app
+yum clean all
+WORKDIR /
 
 CMD bash
 
