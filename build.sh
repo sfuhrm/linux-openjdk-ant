@@ -12,6 +12,7 @@ for image in debian-java centos-java; do
 	echo "###"
 	docker build -t $image $image || exit
 	docker tag $image $DOCKER_ID_USER/$image || exit
+	docker image ls $DOCKER_ID_USER/$image 
 	
 	echo docker push $DOCKER_ID_USER/$image
 done
